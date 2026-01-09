@@ -46,7 +46,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsup",
     "build:dev": "tsc",
     "build:watch": "tsc --watch",
     "clean": "shx rm -rf dist coverage",
@@ -84,12 +84,14 @@
   },
   "devDependencies": {
     "@noneforge/eslint-config": "^0.2.9",
+    "@swc/core": "^1.15.8",
     "@types/node": "^24.3.1",
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
     "eslint": "^9.35.0",
     "reflect-metadata": "^0.2.2",
     "shx": "^0.4.0",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.2",
     "vitepress": "^1.6.4",
     "vitest": "^3.2.4"

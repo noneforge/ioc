@@ -248,15 +248,15 @@ injectAll(Token)           // Get all multi-providers
 |---------|----------------|-------------|----------|--------|
 | Decorator-based DI | Yes | Yes | Yes | Yes |
 | Injection Tokens | Yes | Yes | Yes | Yes |
-| Module System | Yes | No | No | No |
-| Built-in Interceptors | Yes | No | No | No |
+| Module System | Yes | Yes | No | No |
+| Built-in Interceptors | Yes | Yes | Yes | No |
 | Testing Utilities | Yes | No | No | No |
 | AOP Decorators | Yes | No | No | No |
-| Cycle Detection | Yes | No | No | No |
+| Cycle Detection | Yes | Yes | Yes | No |
 | Dependency Graph | Yes | No | No | No |
-| Request Scope | Yes | Manual | Yes | Yes |
+| Request Scope | Yes | Yes | Yes | Yes |
 | Async Providers | Yes | Yes | Yes | Yes |
-| Conditional Providers | Yes | No | No | No |
+| Conditional Providers | Yes | Yes | No | No |
 | EnhancedCache (LRU/LFU) | Yes | No | No | No |
 
 ## Examples

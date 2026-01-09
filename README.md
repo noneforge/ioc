@@ -6,6 +6,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 
+---
+
+### **[View Full Documentation](https://noneforge.github.io/ioc/)**
+
+[Getting Started](https://noneforge.github.io/ioc/guide/getting-started.html) · [Core Concepts](https://noneforge.github.io/ioc/guide/core-concepts.html) · [API Reference](https://noneforge.github.io/ioc/guide/api-reference.html)
+
+---
+
 A modern, feature-rich Dependency Injection container for TypeScript applications. Built with developer experience in mind, featuring decorators, modules, interceptors, and comprehensive testing utilities.
 
 ## Features
@@ -31,7 +39,7 @@ npm install @noneforge/ioc reflect-metadata
 ```
 
 **Required peer dependencies:**
-- `reflect-metadata` >= 0.1.13
+- `reflect-metadata` >= 0.2.0
 - `typescript` >= 5.0
 
 ### TypeScript Configuration
@@ -265,7 +273,7 @@ See the [examples](./examples) directory for runnable code samples:
 
 - Node.js >= 18.18.0
 - TypeScript >= 5.0
-- `reflect-metadata` >= 0.1.13
+- `reflect-metadata` >= 0.2.0
 
 ## Contributing
 

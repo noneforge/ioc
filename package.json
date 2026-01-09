@@ -1,0 +1,101 @@
+{
+  "name": "@noneforge/ioc",
+  "version": "0.1.0",
+  "description": "A powerful and flexible dependency injection container for TypeScript with advanced features",
+  "keywords": [
+    "dependency-injection",
+    "di",
+    "ioc",
+    "container",
+    "typescript",
+    "decorators",
+    "injectable",
+    "reflect-metadata",
+    "noneforge"
+  ],
+  "author": "noneforge",
+  "license": "MIT",
+  "homepage": "https://github.com/noneforge/ioc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noneforge/ioc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noneforge/ioc/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:dev": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "shx rm -rf dist coverage",
+    "prebuild": "npm run clean",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "lint": "eslint ./src --max-warnings 0",
+    "lint:fix": "eslint ./src --fix",
+    "lint:tests": "eslint ./tests --max-warnings 0",
+    "lint:tests:fix": "eslint ./tests --fix",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "version": "npm run build",
+    "release": "npm version patch && npm publish --access public",
+    "release:minor": "npm version minor && npm publish --access public",
+    "release:major": "npm version major && npm publish --access public",
+    "release:beta": "npm version prerelease --preid=beta && npm publish --tag beta --access public",
+    "release:alpha": "npm version prerelease --preid=alpha && npm publish --tag alpha --access public",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "^0.2.0",
+    "typescript": ">=5.5.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@noneforge/eslint-config": "^0.2.9",
+    "@types/node": "^24.3.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "eslint": "^9.35.0",
+    "reflect-metadata": "^0.2.2",
+    "shx": "^0.4.0",
+    "typescript": "^5.9.2",
+    "vitepress": "^1.6.4",
+    "vitest": "^3.2.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

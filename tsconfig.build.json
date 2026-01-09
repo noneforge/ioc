@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "inlineSources": false,
+    "stripInternal": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.test.d.ts",
+    "**/*.spec.d.ts",
+    "src/**/__tests__/**",
+    "src/**/__mocks__/**",
+    "src/test-utils/**",
+    "vitest.config.ts",
+    "eslint.config.ts"
+  ]
+}
